@@ -11,7 +11,7 @@ function Chat({ user }) {
     setInput('');
 
     try {
-      const response = await axios.post('https://100.20.92.101/chat', { input });
+      const response = await axios.post('https://gorgptback.onrender.com/chat', { input });
       setMessages([...messages, newMessage, { role: 'model', text: response.data.text }]);
     } catch (error) {
       console.error('Failed to send message', error);
